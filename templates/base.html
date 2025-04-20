@@ -1,0 +1,75 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}🥚 Bunny Hunt{% endblock %}</title>
+    <h1>404BunnyNotFound</h1>
+    <style>
+        body {
+            font-family: "Trebuchet MS", sans-serif;
+            background: #fffaf4;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff69b4;
+        }
+
+        .egg-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .egg-grid button {
+            border: none;
+            background: none;
+            padding: 0;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .egg-grid button:hover {
+            transform: scale(1.1);
+        }
+
+        .egg-grid img {
+            width: 120px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .result {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .correct-guess img {
+            border: 4px solid #a1e6a1; 
+        }
+
+        .incorrect-guess img {
+            border: 4px solid #f5a1a1; 
+        }
+
+        .winner img {
+            border: 4px solid #b5f5cc; 
+            box-shadow: 0 0 12px rgba(0, 255, 100, 0.3);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
